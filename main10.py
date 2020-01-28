@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
-import sys, random
+import sys, random #importing necessary libraries
 
-assert sys.version_info >= (3,7), "This script requires at least Python 3.7"
+assert sys.version_info >= (3,7), "This script requires at least Python 3.7" #requiring the version of of python to be newer than 3.7
 
 
-print('Greetings!')
-colors = ['red','orange','yellow','green','blue','violet','purple']
-play_again = ''
+print('Greetings!') #prints a friendly message!
+colors = ['red','orange','yellow','green','blue','violet','purple'] #defines a list of colors
+play_again = '' #sets play_again to a null value
 best_count = sys.maxsize            # the biggest number
 
-while (play_again != 'n' and play_again != 'no'):
-    match_color = random.choice(colors)
-    count = 0
-    color = ''
+while (play_again != 'n' and play_again != 'no'): # keeps looping as long as the user agrees to play again
+    match_color = random.choice(colors) #
+    count = 0 # sets attempt count to 0
+    color = '' # random color is set to null value
     while (color != match_color):
         color = input("\nWhat is my favorite color? ")  #\n is a special code that adds a new line
         color = color.lower().strip()
